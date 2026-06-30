@@ -1,25 +1,21 @@
 (function(){
   const eventDate = new Date('2026-08-01T00:00:00+09:00');
-  const target = document.getElementById('dday');
-  function updateDday(){
-    const now = new Date();
-    const todayKst = new Date(now.toLocaleString('en-US',{timeZone:'Asia/Seoul'}));
-    todayKst.setHours(0,0,0,0);
-    const diff = Math.ceil((eventDate - todayKst) / 86400000);
-    if(diff > 0) target.textContent = `D-${diff}`;
-    else if(diff === 0) target.textContent = 'D-DAY';
-    else target.textContent = 'THANK YOU';
-  }
-  updateDday();
+  const now = new Date();
+  const diff = Math.ceil((eventDate - now) / (1000 * 60 * 60 * 24));
+  const dday = document.getElementById('dday');
+  if (dday) dday.textContent = diff > 0 ? `D-${diff}` : diff === 0 ? 'D-DAY' : 'THANK YOU';
 
   const items = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
       if(entry.isIntersecting){
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        io.unobserve(entry.target);
       }
     });
-  },{threshold:.14});
-  items.forEach(el=>observer.observe(el));
+  }, {threshold:0.15});
+  items.forEach((el, i)=>{
+    el.style.transitionDelay = `${Math.min(i*80, 360)}ms`;
+    io.observe(el);
+  });
 })();

@@ -8,34 +8,35 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="유찬이 첫 번째 생일파티에 초대합니다" />
   <meta property="og:description" content="2026.08.01 Saturday 12:00 PM · 신라스테이 서초 3F" />
-  <meta property="og:image" content="./og-image.png" />
-  <meta name="theme-color" content="#f8f5ef" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta property="og:image" content="og-image.png" />
+  <meta name="theme-color" content="#fbfaf7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="invite" aria-label="유찬이 돌잔치 초대장">
-    <section class="hero fade-in">
+  <main class="page">
+    <section class="hero reveal">
       <p class="eyebrow">INVITATION</p>
+      <div class="line"></div>
       <h1>저의 첫 생일파티에 초대합니다</h1>
-      <div class="divider" aria-hidden="true"></div>
-      <p class="date-main">2026.08.01</p>
-      <p class="date-sub">Saturday 12:00 PM</p>
-      <figure class="photo-wrap reveal">
-        <img src="./yuchan_hero.jpg" alt="유찬이 사진" />
+      <p class="date">2026.08.01</p>
+      <p class="time">Saturday 12:00 PM</p>
+      <figure class="photo-card">
+        <img src="yuchan_hero.jpg" alt="유찬이 사진">
       </figure>
     </section>
 
-    <section class="dday reveal" aria-label="디데이">
+    <section class="dday reveal">
       <p>유찬이의 첫 생일까지</p>
       <strong id="dday">D-32</strong>
     </section>
 
     <section class="parents reveal">
-      <p class="parent-line">아빠&nbsp;&nbsp;김근욱</p>
-      <p class="and">그리고</p>
-      <p class="parent-line">엄마&nbsp;&nbsp;유진주</p>
+      <p>아빠&nbsp;&nbsp;김근욱</p>
+      <span>그리고</span>
+      <p>엄마&nbsp;&nbsp;유진주</p>
     </section>
 
     <section class="message reveal">
@@ -45,33 +46,27 @@
       <p>함께 축하해주세요</p>
     </section>
 
-    <section class="info-card reveal" aria-label="행사 정보">
-      <div class="info-row">
-        <span class="icon" aria-hidden="true">⌗</span>
+    <section class="info reveal">
+      <div class="row">
+        <div class="icon">▧</div>
         <div>
-          <p class="label">일시</p>
+          <b>일시</b>
           <p>2026.08.01 (토)</p>
           <p>12:00 PM</p>
         </div>
       </div>
-      <div class="info-row">
-        <span class="icon pin" aria-hidden="true">⌖</span>
+      <div class="row">
+        <div class="icon">⌖</div>
         <div>
-          <p class="label">장소</p>
+          <b>장소</b>
           <p>신라스테이 서초 3F</p>
         </div>
       </div>
-      <a class="map-button" href="https://m.place.naver.com/restaurant/1316667608/location?entry=plt&filter=location&selected_place_id=1316667608" target="_blank" rel="noopener noreferrer" aria-label="네이버 지도에서 위치 보기">
-        <span>⌖</span>
-        네이버 지도에서 위치 보기
-      </a>
+      <a class="map-btn" href="https://m.place.naver.com/restaurant/1316667608/location?entry=plt&filter=location&selected_place_id=1316667608" target="_blank" rel="noopener">네이버 지도에서 위치 보기</a>
     </section>
 
-    <footer class="closing reveal">
-      <p>함께해 주시는 모든 분들께</p>
-      <p>진심으로 감사드립니다.</p>
-    </footer>
+    <footer class="reveal">함께해 주시는 모든 분들께<br>진심으로 감사드립니다.</footer>
   </main>
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
