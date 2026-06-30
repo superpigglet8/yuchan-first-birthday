@@ -1,0 +1,43 @@
+:root{
+  --bg:#fbfaf7;
+  --paper:#fffefb;
+  --ink:#26231f;
+  --muted:#7c746b;
+  --gold:#b99655;
+  --line:#e7ded1;
+  --shadow:0 18px 50px rgba(93,74,45,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#fbfaf7 0%,#f7f2ea 100%);
+  color:var(--ink);
+  font-family:Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Serif KR", serif;
+  -webkit-font-smoothing:antialiased;
+  word-break:keep-all;
+}
+.invite{
+  width:min(100%,520px);
+  margin:0 auto;
+  min-height:100vh;
+  background:var(--paper);
+  overflow:hidden;
+  box-shadow:0 0 80px rgba(0,0,0,.04);
+}
+.hero{padding:42px 24px 0;text-align:center;opacity:0;animation:pageIn 1.2s ease forwards}
+.eyebrow{margin:0 0 38px;color:var(--gold);font-family:Georgia,serif;letter-spacing:.42em;font-size:13px}
+h1{margin:0;font-family:Georgia,"Times New Roman","Noto Serif KR",serif;font-weight:400;font-size:clamp(28px,7.4vw,38px);line-height:1.45;letter-spacing:.02em}
+.divider{width:1px;height:42px;background:var(--line);margin:26px auto}
+.date-main{margin:0;color:var(--gold);font-family:Georgia,serif;font-size:27px;letter-spacing:.18em}
+.date-sub{margin:8px 0 28px;font-family:Georgia,serif;font-size:17px;letter-spacing:.12em;color:#3c3833}
+.photo-wrap{margin:0 -24px;border-radius:0 0 50% 50%/0 0 8% 8%;overflow:hidden;background:#f6f4f0}
+.photo-wrap img{display:block;width:100%;height:auto}
+section{padding-left:28px;padding-right:28px}.reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.dday{text-align:center;padding-top:42px;padding-bottom:34px}.dday:before{content:"";display:block;width:40px;height:1px;background:var(--line);margin:0 auto 22px}.dday p{margin:0 0 8px;color:#4c4640;font-size:18px;letter-spacing:.08em}.dday strong{font-family:Georgia,serif;font-weight:400;font-size:58px;letter-spacing:.08em;color:var(--gold)}
+.parents{text-align:center;padding-top:6px;padding-bottom:34px}.parent-line{margin:0;font-size:28px;letter-spacing:.34em;font-family:Georgia,"Noto Serif KR",serif}.and{margin:18px 0;color:var(--muted);font-size:17px;letter-spacing:.28em}
+.message{text-align:center;padding-top:8px;padding-bottom:42px;font-size:17px;line-height:2.05;letter-spacing:.06em;color:#38332e}.message p{margin:0}.message p+p{margin-top:2px}.message p:last-child{margin-top:18px}
+.info-card{padding-top:10px;padding-bottom:32px}.info-card:before{content:"";display:block;width:1px;height:36px;background:var(--line);margin:0 auto 28px}.info-row{display:grid;grid-template-columns:54px 1fr;gap:10px;width:min(100%,340px);margin:0 auto 26px;align-items:start}.icon{width:34px;height:34px;border:1px solid var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;line-height:1}.icon.pin{border-radius:50%}.label{color:#5d554d;margin-bottom:6px!important;letter-spacing:.2em}.info-row p{margin:0 0 5px;font-size:17px;line-height:1.55;letter-spacing:.04em}.map-button{width:min(100%,370px);height:58px;margin:28px auto 0;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;color:var(--gold);background:#fff;border:1px solid rgba(185,150,85,.18);border-radius:999px;box-shadow:var(--shadow);font-size:18px;letter-spacing:.02em;transition:transform .2s ease,box-shadow .2s ease}.map-button:active{transform:translateY(1px);box-shadow:0 10px 28px rgba(93,74,45,.12)}
+.closing{text-align:center;padding-top:40px;padding-bottom:58px;color:#3b352f;font-size:18px;line-height:1.9;letter-spacing:.12em}.closing:before{content:"";display:block;width:74%;border-top:1px dashed #ddd3c5;margin:0 auto 40px}.closing p{margin:0}
+@keyframes pageIn{from{opacity:0;filter:blur(5px);transform:translateY(8px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@media(max-width:380px){.hero{padding-top:34px}h1{font-size:26px}.date-main{font-size:24px}.dday strong{font-size:50px}.parent-line{font-size:24px}.message{font-size:15.5px;padding-left:22px;padding-right:22px}.map-button{font-size:16px}}
